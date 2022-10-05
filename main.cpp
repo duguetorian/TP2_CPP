@@ -7,9 +7,12 @@
 #include <deque>
 #include <string>
 
-#include "Derivation.h"
+// #include "Derivation.h"
 #include "Operation.h"
 #include "Operator.h"
+#include "OperatorPlus.h"
+#include "OperatorDiv.h"
+#include "OperatorMinus.h"
 
 /*
  * Exemple de tests pour vos classes Operator, n'hésitez pas à en ajouter et à
@@ -49,7 +52,16 @@ int main()
 
 	std::cout << "Target: " << target << std::endl;
 
+	int left = 10;
+	int right = 2;
+	OperatorPlus plus;
+	OperatorDiv div;
+	OperatorMinus minus;
+	std::cout << "10 + 2 = " << plus(left, right) << "\n" << std::endl;
+	std::cout << "10 / 2 = " << div(left, right) << "\n" << std::endl;
+	std::cout << "10 - 2 = " << minus(left, right) << "\n" << std::endl;
 
+#if false
 	/* On crée une pile de Derivation pour parcourir toutes les combinaisons
 	 * possibles en fonction des nombres disponibles */
 	std::vector<Derivation> derivations{ Derivation{numbers, target} };
@@ -75,4 +87,5 @@ int main()
 	};
 
 	/* Q11 Afficher le résultat */
+#endif
 }
