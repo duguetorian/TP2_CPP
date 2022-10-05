@@ -13,6 +13,7 @@
 #include "OperatorPlus.h"
 #include "OperatorDiv.h"
 #include "OperatorMinus.h"
+#include "OperatorTimes.h"
 
 /*
  * Exemple de tests pour vos classes Operator, n'hésitez pas à en ajouter et à
@@ -59,9 +60,11 @@ int main()
 	OperatorPlus plus;
 	OperatorDiv div;
 	OperatorMinus minus;
+	OperatorTimes times;
 	std::cout << "10 + 2 = " << plus(left, right) << "\n" << std::endl;
 	std::cout << "10 / 2 = " << div(left, right) << "\n" << std::endl;
 	std::cout << "10 - 2 = " << minus(left, right) << "\n" << std::endl;
+	std::cout << "10 * 2 = " << times(left, right) << "\n" << std::endl;
 
 #if false
 	/* On crée une pile de Derivation pour parcourir toutes les combinaisons

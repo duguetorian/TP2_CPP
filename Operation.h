@@ -10,9 +10,12 @@ class Operation
 {
 private:
 	/* Q3. Ajouter les attributs nécessaires */
+	int left;
+	int right;
+	Operator& op;
 
 public:
-	Operation(long left, const Operator& n, long right);
+	Operation(int left, const Operator& n, int right);
 
 	/* Q4. Ajouter un opérateur d'affichage permettant d'afficher l'opération,
 	 * par exemple sous la forme "3 + 2 = 5" */
