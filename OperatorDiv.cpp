@@ -22,3 +22,12 @@ int OperatorDiv::operator()(int left, int right) const
     }
     return 0;
 }
+
+void OperatorDiv::print(std::ostream& os, int left, int right) const
+{
+    if (isInteger(left, right))
+    {
+        os << left << " / " << right << " = " << operator()(left, right) << "\n";
+    }
+    os << "The division didn't return an integer\n";
+}

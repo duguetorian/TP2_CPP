@@ -13,7 +13,7 @@ public:
 
 	/* Q3. La méthode print permet d'afficher une opération entre deux
 	 * opérandes, elle est implémentée dans les classes-filles */
-	// virtual void print(std::ostream& os, int left, int right) const = 0;
+	virtual void print(std::ostream& os, int left, int right) const = 0;
 };
 
 

@@ -22,3 +22,12 @@ int OperatorMinus::operator()(int left, int right) const
     }
     return 0;
 }
+
+void OperatorMinus::print(std::ostream& os, int left, int right) const
+{
+    if (isPositive(left, right))
+    {
+        os << left << " - " << right << " = " << operator()(left, right) << "\n";
+    }
+    os << "The substraction didn't return a positive integer\n";
+}

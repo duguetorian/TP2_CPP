@@ -14,6 +14,7 @@ private:
 
 public:
     int operator()(int left, int right) const;
+    void print(std::ostream& os, int left, int right) const;
 };
 
 
