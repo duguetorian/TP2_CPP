@@ -15,12 +15,14 @@ class Derivation
 private:
 	/* Q5. ajouter un conteneur d'opérations et de nombres disponibles */
 	/* L'attribut target représente le nombre ciblé dont on cherche à s'approcher. */
-	long target;
+	int target;
+	std::vector<int> availables;
+	std::vector<Operation*> used_operations;
 
 public:
 	/* Q5. Crée une dérivation à partir d'une collection de nombres et d'un
 	 * résultat à atteindre (ou approcher) */
-	Derivation(std::vector<long> numbers, long target);
+	Derivation(std::vector<int> numbers, int target);
 
 	/* Crée une dérivation en en copiant une autre */
 	Derivation(const Derivation& base) = default;
@@ -28,11 +30,11 @@ public:
 	/* Q6. Compléter ces deux méthodes qui indiquent respectivement quel est
 	 * le nombre le plus proche de la solution atteint et à quelle
 	 * distance de la solution il se trouve */
-	long closest() const;
-	long distance() const;
+	int closest() const;
+	int distance() const;
 
 	/* Q7. Ajoute une étape à une dérivation */
-	bool addOperation(long left, const Operator& o, long right);
+	bool addOperation(int left, const Operator& o, int right);
 
 	/* Q8. Créer les méthodes begin() et end() renvoyant un itérateur du type
 	 * approprié (une spécialisation de DerivationIterator)

@@ -55,16 +55,23 @@ int main()
 	std::cout << "Target: " << target << std::endl;
 	#endif
 
-	int left = 10;
-	int right = 2;
 	OperatorPlus plus;
 	OperatorDiv div;
 	OperatorMinus minus;
 	OperatorTimes times;
+	int left = 10;
+	int right = 2;
 	std::cout << "10 + 2 = " << plus(left, right) << "\n" << std::endl;
 	std::cout << "10 / 2 = " << div(left, right) << "\n" << std::endl;
 	std::cout << "10 - 2 = " << minus(left, right) << "\n" << std::endl;
 	std::cout << "10 * 2 = " << times(left, right) << "\n" << std::endl;
+
+	int left2 = 36;
+	int right2 = 4;
+	plus.print(std::cout, left2, right2);
+	div.print(std::cout, left2, right2);
+	minus.print(std::cout, left2, right2);
+	times.print(std::cout, left2, right2);
 
 #if false
 	/* On crée une pile de Derivation pour parcourir toutes les combinaisons

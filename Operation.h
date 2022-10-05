@@ -19,6 +19,7 @@ public:
 
 	/* Q4. Ajouter un opérateur d'affichage permettant d'afficher l'opération,
 	 * par exemple sous la forme "3 + 2 = 5" */
+	friend std::ostream& operator<<(std::ostream& os, Operation& op);
 };
 
 

@@ -28,6 +28,7 @@ void OperatorDiv::print(std::ostream& os, int left, int right) const
     if (isInteger(left, right))
     {
         os << left << " / " << right << " = " << operator()(left, right) << "\n";
+        return;
     }
     os << "The division didn't return an integer\n";
 }

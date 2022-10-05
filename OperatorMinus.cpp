@@ -28,6 +28,7 @@ void OperatorMinus::print(std::ostream& os, int left, int right) const
     if (isPositive(left, right))
     {
         os << left << " - " << right << " = " << operator()(left, right) << "\n";
+        return;
     }
     os << "The substraction didn't return a positive integer\n";
 }

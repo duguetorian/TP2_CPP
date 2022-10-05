@@ -9,8 +9,7 @@ int OperatorTimes::operator()(int left, int right) const
         return left * right;
     }
 
-int void print(std::ostream& os, int left, int right) const=0;
+void OperatorTimes::print(std::ostream& os, int left, int right) const
     {
-        os << left  << " x " <<  right << "=" << operator()() << "\n";
-    
+        os << left  << " x " <<  right << " = " << operator()(left, right) << "\n";
     }

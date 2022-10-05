@@ -10,8 +10,8 @@ int OperatorPlus::operator()(int left, int right) const
     return left + right;
 }
 
-int void print(std::ostream& os, int left, int right) const=0;
+void OperatorPlus::print(std::ostream& os, int left, int right) const
     {
-        os << left  << " + " <<  right << "=" << operator()() << "\n";
+        os << left  << " + " <<  right << " = " << operator()(left, right) << "\n";
     
     }
