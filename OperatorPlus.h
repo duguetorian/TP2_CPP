@@ -12,4 +12,3 @@ class OperatorPlus: public Operator
 
 
 #endif //OPERATOR_PLUS_H
-
