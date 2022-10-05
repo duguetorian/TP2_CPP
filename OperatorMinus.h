@@ -11,6 +11,9 @@ class OperatorMinus: public Operator
 {
 private:
     const bool isPositive(int left, int right) const;
+
+public:
+    int operator()(int left, int right) const;
 };
 
 

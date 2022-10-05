@@ -16,7 +16,7 @@ const bool OperatorDiv::isInteger(int left, int right) const
 
 int OperatorDiv::operator()(int left, int right) const
 {
-    if (isPositive(left, right))
+    if (isInteger(left, right))
     {
         return left / right;
     }

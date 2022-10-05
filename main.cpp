@@ -37,6 +37,7 @@
 
 int main()
 {
+	#if false
 	/* Lire les nombres depuis l'entrée standard
 	 * on lit d'abord le résultat-cible, puis une série de nombres
 	 */
@@ -51,6 +52,7 @@ int main()
 	std::cout << "\n";
 
 	std::cout << "Target: " << target << std::endl;
+	#endif
 
 	int left = 10;
 	int right = 2;

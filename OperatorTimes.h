@@ -8,7 +8,10 @@
 
 
 class OperatorTimes: public Operator
-{};
+{
+public:
+    int operator()(int left, int right) const;
+};
 
 
 #endif //OPERATOR_TIMES_H

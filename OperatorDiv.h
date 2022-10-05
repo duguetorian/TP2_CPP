@@ -13,7 +13,7 @@ private:
     const bool isInteger(int left, int right) const;
 
 public:
-    override int operator()(int left, int right) const;
+    int operator()(int left, int right) const;
 };
 
 

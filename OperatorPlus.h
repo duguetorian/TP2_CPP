@@ -8,7 +8,10 @@
 
 
 class OperatorPlus: public Operator
-{};
+{
+public:
+    int operator()(int left, int right) const;
+};
 
 
 #endif //OPERATOR_PLUS_H
