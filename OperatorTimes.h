@@ -11,6 +11,7 @@ class OperatorTimes: public Operator
 {
 public:
     int operator()(int left, int right) const;
+    virtual void print(std::ostream& os, int left, int right) const = 0;
 };
 
 
