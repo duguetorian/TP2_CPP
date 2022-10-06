@@ -42,6 +42,9 @@ public:
 	 * end()   doit être un itérateur invalide (permettant la fin de
 	 *         l'itération)
 	 */
+	DerivationIterator begin();
+
+	DerivationIterator end();
 
 	/* Q9. Implémenter un opérateur << d'affichage permettant d'afficher la
 	 * solution */

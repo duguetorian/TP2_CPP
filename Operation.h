@@ -12,7 +12,7 @@ private:
 	/* Q3. Ajouter les attributs nécessaires */
 	int left;
 	int right;
-	Operator& op;
+	const Operator& used_operator;
 
 public:
 	Operation(int left, const Operator& n, int right);

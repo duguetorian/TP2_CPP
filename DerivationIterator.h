@@ -10,12 +10,12 @@
 // provoquerait une inclusion croisée)
 class Derivation;
 
-class DerivationIterator : public std::iterator_traits<std::tuple<long, long>>
+class DerivationIterator : public std::iterator_traits<std::tuple<int, int>>
 {
 private:
 	const Derivation* derivation;
-	std::vector<long>::const_iterator it;
-	std::vector<long>::const_iterator jt;
+	std::vector<int>::const_iterator it;
+	std::vector<int>::const_iterator jt;
 
 public:
 	/*
@@ -42,7 +42,7 @@ public:
 	 * Cet opérateur retourne la paire correspondant à la position de
 	 * l'itérateur
 	 */
-	std::tuple<long, long> operator*();
+	std::tuple<int, int> operator*();
 
 	/*
 	 * Cet opérateur sert essentiellement à comparer un itérateur à

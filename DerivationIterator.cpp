@@ -13,7 +13,7 @@
  * l'itérateur
  */
 DerivationIterator::DerivationIterator(const Derivation& d):
-	derivation{d},
+	derivation{&d},
 	it{d.availables.cbegin()},
 	jt{d.availables.cbegin()}
 {
@@ -39,9 +39,18 @@ void DerivationIterator::operator++()
 	/* si on suppose que les nombres disponibles sont 1 2 3 4, l'itérateur doit
 	 * retourner les paires suivantes dans cet ordre : (1,2), (1,3), (1,4),
 	 * (2,3), (2,4), (3,4) */
+	if (jt == derivation->availables.end())
+	{
+		++it;
+		jt = it + 1;
+	}
+	else
+	{
+		++jt;
+	}
 }
 
-std::tuple<long, long> DerivationIterator::operator*()
+std::tuple<int, int> DerivationIterator::operator*()
 {
 	return {*it, *jt};
 }
