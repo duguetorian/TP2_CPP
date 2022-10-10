@@ -56,8 +56,6 @@ bool Derivation::addOperation(int left, const Operator& o, int right)
     {
         return false;
     }
-    // Operation newOperation(left, o, right);
-    // used_operations.push_back(newOperation);
     availables.push_back(o(left, right));
     availables.erase(std::find(availables.begin(), availables.end(), left));
     availables.erase(std::find(availables.begin(), availables.end(), right));
@@ -79,15 +77,11 @@ DerivationIterator Derivation::end()
 
 std::ostream& operator<<(std::ostream& os, Derivation& deriv)
 {
-    os << "Target: " << deriv.target << "\n";
+    os << "The target was: " << deriv.target << "\n";
     os << "Operations :\n";
-    // for (int i=0; i<deriv.used_operations.size(); ++i)
-    // {
-    //     os << *deriv.used_operations.at(i) << "\n";
-    // }
-    for (auto i : deriv.used_operations)
+    for (int i=0; i<deriv.used_operations.size(); ++i)
     {
-        os << *i << "\n";
+        os << deriv.used_operations.at(i) << "\n";
     }
     os << "Result: " << deriv.closest() << "\n";
     os << "Distance: " << deriv.distance() << "\n";

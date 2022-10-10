@@ -66,21 +66,15 @@ void testDerivation()
 
 int main()
 {
-	// testOperation();
-	// testDerivation();
-	/* Lire les nombres depuis l'entrée standard
-	 * on lit d'abord le résultat-cible, puis une série de nombres
-	 */
+// testOperation();
+// testDerivation();
+/* Lire les nombres depuis l'entrée standard
+ * on lit d'abord le résultat-cible, puis une série de nombres
+ */
 	std::vector<int> numbers;
 	int target;
 
 	std::cin >> target;
-	// for (int i=0; i<6; i++)
-	// {
-	// 	int number;
-	// 	std::cin >> number;
-	// 	numbers.push_back(number);
-	// }
 	std::copy(std::istream_iterator<int>(std::cin), std::istream_iterator<int>{}, std::back_inserter(numbers));
 
 	std::cout << "Numbers: ";
@@ -96,10 +90,10 @@ int main()
 	Derivation result(derivations.at(0));
 	unsigned int maxDistance = target;
 
-	OperatorPlus plus;
-	OperatorDiv div;
-	OperatorMinus minus;
-	OperatorTimes times;
+	const OperatorPlus plus;
+	const OperatorDiv div;
+	const OperatorMinus minus;
+	const OperatorTimes times;
 	/* On utilise la condition maxDistance > 0 pour se limiter à la
 	 * première solution exacte trouvée */
 	while (!derivations.empty() && maxDistance > 0)
