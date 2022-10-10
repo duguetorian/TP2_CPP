@@ -10,6 +10,6 @@ Operation::Operation(int left, const Operator& n, int right):
 
 std::ostream& operator<<(std::ostream& os, Operation& operation)
 {
-    operation.used_operator.print(std::cout, operation.left, operation.right);
+    operation.used_operator.print(os, operation.left, operation.right);
     return os;
 }

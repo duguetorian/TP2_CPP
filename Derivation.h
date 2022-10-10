@@ -17,7 +17,7 @@ private:
 	/* L'attribut target représente le nombre ciblé dont on cherche à s'approcher. */
 	int target;
 	std::vector<int> availables;
-	std::vector<Operation*> used_operations;
+	std::vector<Operation> used_operations;
 
 public:
 	/* Q5. Crée une dérivation à partir d'une collection de nombres et d'un
@@ -52,6 +52,8 @@ public:
 	/* La classe iterateur est "friend" pour lui permettre d'itérer en
 	 * utilisant les structures de données privées à la classe */
 	friend class DerivationIterator;
+
+	friend std::ostream& operator<<(std::ostream& os, Derivation& deriv);
 };
 
 #endif //DERIVATION_H
